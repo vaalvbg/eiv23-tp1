@@ -29,7 +29,7 @@
 
 /**
  * @brief Sumar dos enteros de 32 bit
- * 
+ *  suma(2,3) => 5
  * @param A registro R0
  * @param B registro R1
  * @return int32_t registro R0 
@@ -44,7 +44,7 @@ endfun suma
 
 /**
  * @brief Sumar los números de un arreglo en memoria
- * 
+ * sumatoria(5,(uint32_t[]){1,2,3,4,5}) => 15
  * @param cuenta Cantidad de números en registro R0
  * @param numeros Dirección del primer número en registro R1
  * @return int64_t parte alta en R1, parte baja en R0 
@@ -59,7 +59,7 @@ endfun sumatoria
 
 /**
  * @brief Encuentra la posicion del máximo elemento de un arreglo
- * 
+ * posicion_maximo(4,(uint32_t[]){1,4,2,3}) => 1
  * @param cuenta cantidad de números en el arreglo, registro R0
  * @param numeros dirección del primer número, registro R1
  * @return uint32_t Posición del mayor número, 0 : inicio del arreglo, 1: segundo número, etc.
@@ -76,7 +76,9 @@ endfun posicion_maximo
  * @brief Ordenar de menor a mayor un arreglo de números en memoria.
  *        La ordenación es en el lugar, sobreescribiendo el arreglo
  *        original.
- * 
+ * uint32_t vals={4,1,3,5,2,6,7};
+ * ordenar_en_sitio_menor_a_mayor(7,vals)
+ * luego vals => {1,2,3,4,5,6,7}
  * @param cuenta Cantidad de números en el arreglo, registro R0
  * @param numeros Dirección del primer número, registro R1
  */
