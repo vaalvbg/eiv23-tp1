@@ -28,11 +28,12 @@
 
 
 /**
- * @brief Sumar dos enteros de 32 bit
+ * Sumar dos enteros de 32 bit
  *  suma(2,3) => 5
- * @param A registro R0
- * @param B registro R1
- * @return int32_t registro R0 
+ * Entrada
+ *  R0, R1 : sumandos, enteros de 32 bit con signo 
+ * Salida
+ *  R0     : suma, entero de 32 bit con signo
  */
 defun suma
     push {r4-r11,lr}
@@ -43,26 +44,38 @@ defun suma
 endfun suma
 
 /**
- * @brief Sumar los números de un arreglo en memoria
+ * Sumar los números de un arreglo en memoria de enteros de
+ * 32 bit con resultado de 64 bit.
+ *
  * sumatoria(5,(uint32_t[]){1,2,3,4,5}) => 15
- * @param cuenta Cantidad de números en registro R0
- * @param numeros Dirección del primer número en registro R1
- * @return int64_t parte alta en R1, parte baja en R0 
+ *
+ * Entrada 
+ *  R0    : Cantidad de números en registro R0, entero de 32 bit
+ *  R1    : Dirección en memoria del primer número, puntero a
+ *          entero de 32 bit con signo.
+ * Salida
+ *  R1:R0 : Sumatoria, entero de 64 bit con signo 
  */
 defun sumatoria
     push {r4-r11,lr}
     // Insertar código a continuación
 
-    // Retorno, antes R0 debe tener el valor correcto
+    // Retorno, antes R1:R0 debe tener el valor correcto
     pop {r4-r11,pc}
 endfun sumatoria
 
 /**
- * @brief Encuentra la posicion del máximo elemento de un arreglo
+ * Encuentra la posicion del máximo elemento de un arreglo
+ *
  * posicion_maximo(4,(uint32_t[]){1,4,2,3}) => 1
- * @param cuenta cantidad de números en el arreglo, registro R0
- * @param numeros dirección del primer número, registro R1
- * @return uint32_t Posición del mayor número, 0 : inicio del arreglo, 1: segundo número, etc.
+ *
+ * Entrada:
+ *  R0 : cantidad de números en el arreglo, entero de 32 bit
+ *  R1 : posición en memoria del primer número, puntero
+ *       a entero de 32 bit con signo.
+ * Salida:
+ *  R0 : posición del máximo elemento en el arreglo, entero
+ *       de 32 bit.
  */
 defun posicion_maximo
     push {r4-r11,lr}
@@ -73,14 +86,21 @@ defun posicion_maximo
 endfun posicion_maximo
 
 /**
- * @brief Ordenar de menor a mayor un arreglo de números en memoria.
- *        La ordenación es en el lugar, sobreescribiendo el arreglo
- *        original.
+ * Ordenar de menor a mayor un arreglo de números en memoria.
+ * La ordenación es en el lugar, sobreescribiendo el arreglo
+ * original.
+ *
  * uint32_t vals={4,1,3,5,2,6,7};
  * ordenar_en_sitio_menor_a_mayor(7,vals)
  * luego vals => {1,2,3,4,5,6,7}
- * @param cuenta Cantidad de números en el arreglo, registro R0
- * @param numeros Dirección del primer número, registro R1
+ *
+ * Entrada:
+ *  R0 : Cantidad de números en el arreglo, entero de 32 bit
+ *  R1 : Dirección del primer número, puntero a entero de
+ *       32 bit con signo.
+ * Salida:
+ *  Sin valor de salida. El arreglo dado debe haber sido ordenado
+ *  sobreescribiendo los valores originales.
  */
 defun ordenar_en_sitio_menor_a_mayor
     push {r4-r11,lr}

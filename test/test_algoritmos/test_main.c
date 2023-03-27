@@ -41,7 +41,7 @@ static void test_sumatoria_3(void)
 {
     int32_t numeros[]={2,1,-3,5};
     const int32_t cantidad = 2;
-    const int64_t esperado = 1+2;
+    const int64_t esperado = 2+1;
     const int64_t obtenido = sumatoria(cantidad,numeros);
     TEST_ASSERT_EQUAL_INT32(esperado,obtenido);
 } 

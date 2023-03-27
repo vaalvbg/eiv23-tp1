@@ -113,7 +113,15 @@ Este proyecto de usa el emulador Renode, por lo tanto no necesitas tener el hard
 
 Recuerda: Si no pasan las pruebas, tu solución no es válida. Si pasan puede ser válida o nó, habra que revisarla en detalle. Pero si la diseñaste cuidadosamente y pasa las pruebas lo más probable es que sea válida.
 
+## Referencia en línea plataforma ARM Cortex-M3
+
+Una buena referencia de la plataforma Cortex-M3 y su conjunto de instrucciones se encuentra en [Cortex-M3 Devices Generic User Guide][www_m3gug]. Esa referencia incluye una tabla resumida del conjunto de instrucciones [tabla de instrucciones][www_m3gug_iset], con links a secciones más detalladas. Además tiene una [referencia rápida de los registros][www_m3gug_regs] y [condiciones][www_m3gug_cond] (que usarás para los saltos condicionales).
+
 [www_vscode]: https://code.visualstudio.com
 [www_git]: https://git-scm.com/
 [www_github]: https://github.com/
+[www_m3gug]: https://developer.arm.com/documentation/dui0552/a?lang=en
+[www_m3gug_iset]: https://developer.arm.com/documentation/dui0552/a/the-cortex-m3-instruction-set/instruction-set-summary?lang=en
+[www_m3gug_regs]: https://developer.arm.com/documentation/dui0552/a/the-cortex-m3-processor/programmers-model/core-registers?lang=en
+[www_m3gug_cond]: https://developer.arm.com/documentation/dui0552/a/the-cortex-m3-instruction-set/about-the-instruction-descriptions/conditional-execution?lang=en
 [eiv23-tp1]: https://github.com/fmirandabonomi/eiv23-tp1
