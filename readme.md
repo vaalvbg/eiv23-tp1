@@ -117,7 +117,7 @@ Dado un arreglo de números de 32 bits en memoria, donde la cantidad de números
 
 ## Uso de pruebas de software para verificar la solución
 
-Este proyecto de usa el emulador Renode, por lo tanto no necesitas tener el hardware para completarlo. El proyecto tiene un conjunto de pruebas para verificar el funcionamiento de las rutinas que debes escribir. Para ejecutar las pruebas, en Visual Studio Code, presiona Ctrl+Shift+P y escribe `platformio:test` luego enter. Puede demorar un tiempo en ejecutarse la simulación. Hay en total 16 casos de prueba, definidos en `test/test_algoritmos/test_main.c. Se prueban tres casos para la suma, seis casos para la sumatoria, dos casos para posición del máximo y dos casos para ordenación.  
+Este proyecto hace uso del emulador Renode, por lo tanto no necesitas tener el hardware para completarlo. El proyecto tiene un conjunto de pruebas para verificar el funcionamiento de las rutinas que debes escribir. Para ejecutar las pruebas, en Visual Studio Code, presiona Ctrl+Shift+P y escribe `platformio:test` luego enter. Puede demorar un tiempo en ejecutarse la simulación. Hay en total 16 casos de prueba, definidos en `test/test_algoritmos/test_main.c. Se prueban tres casos para la suma, seis casos para la sumatoria, dos casos para posición del máximo y dos casos para ordenación.  
 
 Recuerda: Si no pasan las pruebas, tu solución no es válida. Si pasan puede ser válida o nó, habra que revisarla en detalle. Pero si la diseñaste cuidadosamente y pasa las pruebas lo más probable es que sea válida.
 
