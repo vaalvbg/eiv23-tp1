@@ -75,6 +75,15 @@ static void test_sumatoria_6(void)
 
 static void test_posicion_maximo_1(void)
 {
+    int32_t numeros[]={1,2};
+    const int32_t cantidad = 1; // solo el primer número vale
+    const int32_t esperado = 0;
+    const int32_t obtenido = posicion_maximo(cantidad,numeros);
+    TEST_ASSERT_EQUAL_INT32(esperado,obtenido);
+} 
+
+static void test_posicion_maximo_2(void)
+{
     int32_t numeros[]={1,2,3,16,-1,-2,-3};
     const int32_t cantidad = 7;
     const int32_t esperado = 3;
@@ -82,7 +91,7 @@ static void test_posicion_maximo_1(void)
     TEST_ASSERT_EQUAL_INT32(esperado,obtenido);
 } 
 
-static void test_posicion_maximo_2(void)
+static void test_posicion_maximo_3(void)
 {
     int32_t numeros[]={-1,-2,-3,-16,1,2,3};
     const int32_t cantidad = 7;
@@ -93,13 +102,29 @@ static void test_posicion_maximo_2(void)
 
 static void test_ordenar_1(void)
 {
+    int32_t numeros[]={2,1};
+    const int32_t cantidad = 1;
+    int32_t ordenado[]={2,1};
+    ordenar_en_sitio_menor_a_mayor(cantidad,numeros);
+    TEST_ASSERT_EQUAL_MEMORY(ordenado,numeros,sizeof(ordenado));
+} 
+static void test_ordenar_2(void)
+{
+    int32_t numeros[]={2,1};
+    const int32_t cantidad = 2;
+    int32_t ordenado[]={1,2};
+    ordenar_en_sitio_menor_a_mayor(cantidad,numeros);
+    TEST_ASSERT_EQUAL_MEMORY(ordenado,numeros,sizeof(ordenado));
+} 
+static void test_ordenar_3(void)
+{
     int32_t numeros[]={1,4,3,2,5,6};
     const int32_t cantidad = 6;
     int32_t ordenado[]={1,2,3,4,5,6};
     ordenar_en_sitio_menor_a_mayor(cantidad,numeros);
     TEST_ASSERT_EQUAL_MEMORY(ordenado,numeros,sizeof(ordenado));
 } 
-static void test_ordenar_2(void)
+static void test_ordenar_4(void)
 {
     int32_t numeros[]={-1,-4,-3,-2,-5,-6};
     const int32_t cantidad = 6;
@@ -122,8 +147,11 @@ int main(void)
     RUN_TEST(test_sumatoria_6);
     RUN_TEST(test_posicion_maximo_1);
     RUN_TEST(test_posicion_maximo_2);
+    RUN_TEST(test_posicion_maximo_3);
     RUN_TEST(test_ordenar_1);
     RUN_TEST(test_ordenar_2);
+    RUN_TEST(test_ordenar_3);
+    RUN_TEST(test_ordenar_4);
     UNITY_END();
     for(;;); // HALT
 }

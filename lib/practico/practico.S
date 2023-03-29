@@ -90,9 +90,9 @@ endfun posicion_maximo
  * La ordenación es en el lugar, sobreescribiendo el arreglo
  * original.
  *
- * uint32_t vals={4,1,3,5,2,6,7};
+ * uint32_t vals[]={4,1,3,5,2,6,7};
  * ordenar_en_sitio_menor_a_mayor(7,vals)
- * luego vals => {1,2,3,4,5,6,7}
+ * luego vals contendrá {1,2,3,4,5,6,7}
  *
  * Entrada:
  *  n->R0 : Cantidad de números en el arreglo, entero de 32 bit
