@@ -16,7 +16,7 @@ int32_t suma(int32_t A,int32_t B);
  * @param b Puntero al primer número
  * @return sumatoria de b[0] hasta b[n-1]
  */
-int64_t sumatoria(int32_t n,int32_t *b);
+int64_t sumatoria(int32_t n,const int32_t *b);
 
 /**
  * @brief Encuentra la posicion del máximo elemento de un arreglo
@@ -25,7 +25,7 @@ int64_t sumatoria(int32_t n,int32_t *b);
  * @param b Puntero al primer número
  * @return Posición del mayor número k tal que b[k] <= b[i] para todo i en {0,..,n-1}
  */
-int32_t posicion_maximo(int32_t n,int32_t *b);
+int32_t posicion_maximo(int32_t n,const int32_t *b);
 
 /**
  * @brief Ordenar un arreglo de menor a mayor en el lugar
