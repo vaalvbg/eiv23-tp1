@@ -31,7 +31,7 @@
  * Sumar dos enteros de 32 bit
  *  suma(2,3) => 5
  * Entrada
- *  R0, R1 : sumandos, enteros de 32 bit con signo 
+ *  a->R0, b->R1 : sumandos, enteros de 32 bit con signo 
  * Salida
  *  R0     : suma, entero de 32 bit con signo
  */
@@ -50,9 +50,9 @@ endfun suma
  * sumatoria(5,(uint32_t[]){1,2,3,4,5}) => 15
  *
  * Entrada 
- *  R0    : Cantidad de números en registro R0, entero de 32 bit
- *  R1    : Dirección en memoria del primer número, puntero a
- *          entero de 32 bit con signo.
+ *  n->R0    : Cantidad de números en registro R0, entero de 32 bit
+ *  b->R1    : Dirección en memoria del primer número, puntero a
+ *             entero de 32 bit con signo.
  * Salida
  *  R1:R0 : Sumatoria, entero de 64 bit con signo 
  */
@@ -70,9 +70,9 @@ endfun sumatoria
  * posicion_maximo(4,(uint32_t[]){1,4,2,3}) => 1
  *
  * Entrada:
- *  R0 : cantidad de números en el arreglo, entero de 32 bit
- *  R1 : posición en memoria del primer número, puntero
- *       a entero de 32 bit con signo.
+ *  n->R0 : cantidad de números en el arreglo, entero de 32 bit
+ *  b->R1 : posición en memoria del primer número, puntero
+ *          a entero de 32 bit con signo.
  * Salida:
  *  R0 : posición del máximo elemento en el arreglo, entero
  *       de 32 bit.
@@ -95,9 +95,9 @@ endfun posicion_maximo
  * luego vals => {1,2,3,4,5,6,7}
  *
  * Entrada:
- *  R0 : Cantidad de números en el arreglo, entero de 32 bit
- *  R1 : Dirección del primer número, puntero a entero de
- *       32 bit con signo.
+ *  n->R0 : Cantidad de números en el arreglo, entero de 32 bit
+ *  b->R1 : Dirección del primer número, puntero a entero de
+ *          32 bit con signo.
  * Salida:
  *  Sin valor de salida. El arreglo dado debe haber sido ordenado
  *  sobreescribiendo los valores originales.

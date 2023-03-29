@@ -3,36 +3,37 @@
 /**
  * @brief Sumar dos enteros de 32 bit
  * 
- * @param A registro R0
- * @param B registro R1
- * @return int32_t registro R0 
+ * @param A Primer sumando
+ * @param B Segundo sumando
+ * @return Resultado de la suma 
  */
 int32_t suma(int32_t A,int32_t B);
 
 /**
  * @brief Sumar los números de un arreglo en memoria
  * 
- * @param cuenta Cantidad de números en registro R0
- * @param numeros Dirección del primer número en registro R1
- * @return int64_t parte alta en R1, parte baja en R0 
+ * @param n Cantidad de números
+ * @param b Puntero al primer número
+ * @return sumatoria de b[0] hasta b[n-1]
  */
-int64_t sumatoria(int32_t cuenta,int32_t *numeros);
+int64_t sumatoria(int32_t n,int32_t *b);
 
 /**
  * @brief Encuentra la posicion del máximo elemento de un arreglo
  * 
- * @param cuenta cantidad de números en el arreglo, registro R0
- * @param numeros dirección del primer número, registro R1
- * @return uint32_t Posición del mayor número, 0 : inicio del arreglo, 1: segundo número, etc.
+ * @param n Cantidad de números
+ * @param b Puntero al primer número
+ * @return Posición del mayor número k tal que b[k] <= b[i] para todo i en {0,..,n-1}
  */
-int32_t posicion_maximo(int32_t cuenta,int32_t *numeros);
+int32_t posicion_maximo(int32_t n,int32_t *b);
 
 /**
- * @brief Ordenar de menor a mayor un arreglo de números en memoria.
- *        La ordenación es en el lugar, sobreescribiendo el arreglo
- *        original.
- * 
- * @param cuenta Cantidad de números en el arreglo, registro R0
- * @param numeros Dirección del primer número, registro R1
+ * @brief Ordenar un arreglo de menor a mayor en el lugar
+ *
+ * Luego del llamado a esta función debe cumplirse que
+ * b[i]<=b[j] para todo i <= j con i,j en {0,..,n-1}
+ *  
+ * @param n Cantidad de números
+ * @param b Puntero al primer número
  */
-void ordenar_en_sitio_menor_a_mayor(int32_t cuenta,int32_t *numeros);
+void ordenar_en_sitio_menor_a_mayor(int32_t n,int32_t *b);
