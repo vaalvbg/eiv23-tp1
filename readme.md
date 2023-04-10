@@ -1,4 +1,4 @@
-# Electrónica IV. Trabajo práctico 1. Algoritmos en máquina de acceso aleatorio
+# Electrónica IV. Trabajo práctico 1. Algoritmos en ensamblador Cortex-M3
 
 Antes de comenzar:
 
