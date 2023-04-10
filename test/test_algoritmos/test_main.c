@@ -26,7 +26,7 @@ static void test_sumatoria_1(void)
     const int32_t cantidad = 0;
     const int64_t esperado = 0;
     const int64_t obtenido = sumatoria(cantidad,numeros);
-    TEST_ASSERT_EQUAL_INT32(esperado,obtenido);
+    TEST_ASSERT(esperado==obtenido);
 } 
 
 static void test_sumatoria_2(void)
@@ -35,7 +35,7 @@ static void test_sumatoria_2(void)
     const int32_t cantidad = 1;
     const int64_t esperado = 2;
     const int64_t obtenido = sumatoria(cantidad,numeros);
-    TEST_ASSERT_EQUAL_INT32(esperado,obtenido);
+    TEST_ASSERT(esperado==obtenido);
 } 
 static void test_sumatoria_3(void)
 {
@@ -43,7 +43,7 @@ static void test_sumatoria_3(void)
     const int32_t cantidad = 2;
     const int64_t esperado = 2+1;
     const int64_t obtenido = sumatoria(cantidad,numeros);
-    TEST_ASSERT_EQUAL_INT32(esperado,obtenido);
+    TEST_ASSERT(esperado==obtenido);
 } 
 
 static void test_sumatoria_4(void)
@@ -52,7 +52,7 @@ static void test_sumatoria_4(void)
     const int32_t cantidad = 4;
     const int64_t esperado = 1+2-3+5;
     const int64_t obtenido = sumatoria(cantidad,numeros);
-    TEST_ASSERT_EQUAL_INT32(esperado,obtenido);
+    TEST_ASSERT(esperado==obtenido);
 } 
 
 static void test_sumatoria_5(void)
@@ -61,7 +61,7 @@ static void test_sumatoria_5(void)
     const int32_t cantidad = 2;
     const int64_t esperado = ((int64_t)INT32_MAX) + 1LL;
     const int64_t obtenido = sumatoria(cantidad,numeros);
-    TEST_ASSERT_EQUAL_INT32(esperado,obtenido);
+    TEST_ASSERT(esperado==obtenido);
 } 
 
 static void test_sumatoria_6(void)
@@ -70,7 +70,7 @@ static void test_sumatoria_6(void)
     const int32_t cantidad = 2;
     const int64_t esperado = ((int64_t)INT32_MIN) - 1LL;
     const int64_t obtenido = sumatoria(cantidad,numeros);
-    TEST_ASSERT_EQUAL_INT32(esperado,obtenido);
+    TEST_ASSERT(esperado==obtenido);
 } 
 
 static void test_posicion_maximo_1(void)
